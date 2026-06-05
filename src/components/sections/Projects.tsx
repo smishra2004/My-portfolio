@@ -81,25 +81,27 @@ const projectsData = [
   },
   {
     id: 4,
-    tagline: "Detects fraudulent financial transactions using machine learning and intelligent data analysis.",
-    title: "Fraud detection model",
-    description: "A fraud detection system using EDA, feature engineering, SMOTE, and Logistic Regression to accurately identify fraudulent transactions.",
-    gradientStyle: "linear-gradient(10deg, rgb(217, 119, 6) 49.9%, rgb(217, 119, 6) 81.7%, rgb(251, 191, 36) 99.88%)", 
-    accentColor: "bg-[#F59E0B]", textAccent: "text-[#F59E0B]",
+    tagline: "End-to-end MLOps pipeline that trains, evaluates, and self-deploys a production ML model.",
+    title: "Vehicle Insurance Risk — MLOps Pipeline",
+    description: "A fully automated, cloud-native ML pipeline for vehicle insurance risk prediction — spanning MongoDB data ingestion to AWS-hosted Flask API — with CI/CD that deploys on every Git push without any manual intervention.",
+    gradientStyle: "linear-gradient(10deg, rgb(109, 40, 217) 49.9%, rgb(109, 40, 217) 81.7%, rgb(167, 139, 250) 99.88%)",
+    accentColor: "bg-[#7C3AED]", textAccent: "text-[#7C3AED]",
     bullets: [
-      "Performed large-scale exploratory data analysis (6.3M+ records) using Pandas, NumPy, Matplotlib, and Seaborn to examine class imbalance, transaction distributions, fraud patterns by type, and temporal fraud trends.",
-      "Engineered domain-specific features such as balanceDiffOrig and balanceDiffDest, and identified suspicious zero-balance patterns in TRANSFER and CASH_OUT transactions.",
-      "Built a preprocessing pipeline using ColumnTransformer with StandardScaler for numerical features and OneHotEncoder for categorical encoding.",
-      "Addressed severe class imbalance using SMOTE oversampling integrated within an imbalanced-learn pipeline.",
-      "Trained and evaluated a Logistic Regression classifier with probability threshold tuning, achieving high recall for fraud detection while analyzing precision-recall trade-offs via classification metrics and confusion matrix."
+      "Architected a 6-stage modular ML pipeline (Ingestion → Validation → Transformation → Training → Evaluation → Model Push) where each stage produces typed Artifact entities consumed by the next, enabling isolated testing and clean component handoffs.",
+      "Integrated MongoDB Atlas as the cloud data layer, pulling live records programmatically at runtime to eliminate static file dependencies and mirror real enterprise data architectures.",
+      "Implemented automated model governance: a newly trained model only promotes to production if it surpasses the live S3-hosted model by a configurable performance threshold, preventing regressions from ever reaching users.",
+      "Built a full CI/CD pipeline using GitHub Actions with a self-hosted EC2 runner — on every Git push, Docker builds, pushes to AWS ECR, and redeploys to EC2 automatically with zero manual steps.",
+      "Packaged the entire codebase as an installable local Python package via setup.py and pyproject.toml, with centralized logging, custom exception handling, and YAML-based schema validation across all pipeline stages."
     ],
     techStack: [
       { name: "Python", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "NumPy", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
-      { name: "Pandas", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+      { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "Docker", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+      { name: "AWS", src: "https://cdn.simpleicons.org/amazonaws/FF9900" },
       { name: "Scikit-Learn", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" },
+      { name: "Flask", src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
     ],
-    image: "/matrix.png"
+    image: "/vehicle.png"   // 👈 add your screenshot here
   }
 ];
 
