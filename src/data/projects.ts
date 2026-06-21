@@ -154,7 +154,7 @@ export const projects: Project[] = [
       },
     ],
 
-    image: "/researchmind.png",
+    image: "/research-mind.png",
 
     metadata: {
       type: "Agentic AI Application",
@@ -680,7 +680,7 @@ jobs:
     },
   ],
 
-  image: "/chestxray.png",
+  image: "/chest-xray.png",
 
   metadata: {
     type: "MLOps & Computer Vision",
